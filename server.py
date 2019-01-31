@@ -51,7 +51,7 @@ while True:
             connectionSocket.send(response.encode('utf-8'))
             connectionSocket.close()
 
-        except FileNotFoundError:
+        except Exception:
             print("404 Not Found.")
             #Send response message for file not found
             response = "HTTP/1.1 404 Not Found\n"
