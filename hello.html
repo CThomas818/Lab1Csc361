@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0149)https://connex.csc.uvic.ca/access/content/attachment/5a5b85cd-b586-4831-9295-f06d6b0bf72f/Assignments/982b5f0a-eee4-44c0-9178-0e1e2b16aeb4/hello.html -->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>Hello World</title>
+  <style type="text/css">
+    .backpack.dropzone {
+      font-family: 'SF UI Display', 'Segoe UI';
+      font-size: 15px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      height: 150px;
+      font-weight: lighter;
+      color: white;
+      will-change: right;
+      z-index: 2147483647;
+      bottom: 20%;
+      background: #333;
+      position: fixed;
+      user-select: none;
+      transition: left .5s, right .5s;
+      right: 0px;
+    }
+
+    .backpack.dropzone .animation {
+      height: 80px;
+      width: 250px;
+      background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/hoverstate.png") left center;
+    }
+
+    .backpack.dropzone .title::before {
+      content: 'Save to';
+    }
+
+    .backpack.dropzone.closed {
+      right: -250px;
+    }
+
+    .backpack.dropzone.hover .animation {
+      animation: sxt-play-anim-hover 0.91s steps(21);
+      animation-fill-mode: forwards;
+      background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/hoverstate.png") left center;
+    }
+
+    @keyframes sxt-play-anim-hover {
+      from {
+        background-position: 0px;
+      }
+
+      to {
+        background-position: -5250px;
+      }
+    }
+
+    .backpack.dropzone.saving .title::before {
+      content: 'Saving to';
+    }
+
+    .backpack.dropzone.saving .animation {
+      background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/saving_loop.png") left center;
+      animation: sxt-play-anim-saving steps(59) 2.46s infinite;
+    }
+
+    @keyframes sxt-play-anim-saving {
+      100% {
+        background-position: -14750px;
+      }
+    }
+
+    .backpack.dropzone.saved .title::before {
+      content: 'Saved to';
+    }
+
+    .backpack.dropzone.saved .animation {
+      background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/saved.png") left center;
+      animation: sxt-play-anim-saved steps(20) 0.83s forwards;
+    }
+
+    @keyframes sxt-play-anim-saved {
+      100% {
+        background-position: -5000px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Hello</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
+</body>
+
+</html>
