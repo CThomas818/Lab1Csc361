@@ -55,7 +55,7 @@ while True:
             print("404 Not Found.")
             #Send response message for file not found
             response = "HTTP/1.1 404 Not Found\n"
-            response += "<html><body><center><h1>Error 404: File not found</h1></center><p>Head back to dry land.</p></body></html>\n"
+            response += "<html><body><center><h1>Error 404: File not found</h1></center><p>Head back to dry land.</p></body></html>"
             connectionSocket.send(response.encode('utf-8'))
             print("sent 404.")
             connectionSocket.close()
