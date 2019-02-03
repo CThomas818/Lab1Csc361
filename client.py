@@ -5,9 +5,10 @@ import sys # In order to terminate the program
 
 def main():
 
-    if(len(sys.argv) == 3):
+    if(len(sys.argv) == 4):
         hostname = sys.argv[1]
-        requestfile = sys.argv[2]
+        port = int(sys.argv[2])
+        requestfile = sys.argv[3]
 
         try:
             s = socket(AF_INET, SOCK_STREAM)
@@ -16,7 +17,7 @@ def main():
             requeststring = "GET /"+requestfile+" HTTP/1.1\n"
             print(requeststring)
 
-            s.connect((hostname, 8080))
+            s.connect((hostname, port))
        
             s.send(requeststring.encode('utf-8'))
            
@@ -28,7 +29,7 @@ def main():
             print(e)
 
     else:
-        print("Please specify both a hostname/ip address, and a requested html file.")
+        print("Please specify both a hostname/ip address, a port number, and a requested html file.")
 
 if __name__ == "__main__":
     main()
